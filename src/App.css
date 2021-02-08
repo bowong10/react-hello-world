@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body{
+  min-height: 100vh;
+  padding:0;
+  margin:0;
 }
 
 .App-logo {
@@ -35,4 +41,123 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App {
+  display:flex;
+  flex-flow: column nowrap;
+  height:100%;
+  flex: 1 0 0;
+}
+
+#root {
+  height:100vh;
+}
+
+#root>div{
+  display:flex;
+  flex:1 0 100px;
+  height:100%;
+}
+
+#Header {
+  display:flex;
+  flex-flow: column nowrap;
+  min-height: 100px;
+  background-color:#ffffff;
+
+}
+#Content {
+  display:flex;
+  flex-flow:column nowrap;
+  align-items: flex-start;
+  flex-grow:1;
+  background-color:whitesmoke; 
+}
+
+#Footer {
+  display:flex;
+  height:50px;
+  background-color:blue;
+}
+
+
+#navbar{
+  display:flex;
+  flex-flow:row upwrap;
+  height:50px;
+}
+
+#navtop{
+  display:flex;
+  flex-flow:row upwrap;
+  height:50px;  
+}
+
+ul{
+  list-style-type: none;
+  display:flex;
+  flex-flow:row nowrap;
+  padding:0;
+  margin:0;
+}
+
+ul > li
+{
+  display:flex;
+  min-width:50px;
+  padding: 0 10px;
+  border: solid 1px black;
+  align-items: center;
+}
+
+.todo-list {
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+    /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+  /* Padding for demo purposes */
+  width:50%;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top:5px;
+}
+
+.todo-item{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  border-bottom: 1px solid grey;
+}
+
+input[type=checkbox]{
+  margin-right:10px;
+}
+
+.loading{
+  
+  display:sticky;
+  top:0;
+
+  background-color:yellow;
+}
+
+.formStyle
+{
+  margin:10px;
+  display:flex;
+  flex-flow:column nowrap;
+}
+
+label{
+  padding:5px;
 }
